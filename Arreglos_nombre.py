@@ -16,9 +16,28 @@ reprobaron = [nota for nota in nota if nota < 3]
 print("Aprobaron: ", len(aprobaron), "  Reprobaron: ", len(reprobaron))
 
 # relacion entre codigos y notas
-print("----relacion codigo-notas----" )
-for indice in range(0, len(codigo)): # 
-    print(codigo[indice], nota[indice])
+print("----Relacion codigo-notas----" )
+print("Codigo", "Nota" )
+for valor_a, valor_b in zip(codigo, nota): 
+#for indice in nota :
+    if 0.5 <= valor_b < 2.0:
+       print(valor_a, valor_b, " Insuficiente")
+       insuficiente = len(int(valor_b))
+    elif 2.0 <= valor_b < 3.0:
+        print(valor_a, valor_b, " Suficiente")
+    elif 3.0 <= valor_b < 4.0:
+        print(valor_a, valor_b, " Bien")
+    elif 4.0 <= valor_b <= 5.0:
+        print(valor_a, valor_b, " Muy Bien")
+
+# cuantos estudiantes quedaron en cada una de las categorias
+print("Insuficiente: ", insuficiente)
+
+# Porcentajes de aprobados y reprobados
+porcentaje1 = (n/100)*aprobaron
+porcentaje2 = (n/100)*reprobaron
+print("Aprobados: ", porcentaje1,"%",  "  Reprobados: ", porcentaje2,"%")
+
 
  
 
