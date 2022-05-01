@@ -22,20 +22,22 @@ for valor_a, valor_b in zip(codigo, nota):
 #for indice in nota :
     if 0.5 <= valor_b < 2.0:
        print(valor_a, valor_b, " Insuficiente")
-       insuficiente = len(int(valor_b))
+       insuficiente = [int(valor_b)]
     elif 2.0 <= valor_b < 3.0:
         print(valor_a, valor_b, " Suficiente")
+        suficiente = [int(valor_b)]
     elif 3.0 <= valor_b < 4.0:
         print(valor_a, valor_b, " Bien")
     elif 4.0 <= valor_b <= 5.0:
         print(valor_a, valor_b, " Muy Bien")
 
 # cuantos estudiantes quedaron en cada una de las categorias
-print("Insuficiente: ", insuficiente)
+print("Suficiente: ", len(suficiente))
+print("Insuficiente: ", len(insuficiente))
 
 # Porcentajes de aprobados y reprobados
-porcentaje1 = (n/100)*aprobaron
-porcentaje2 = (n/100)*reprobaron
+porcentaje1 = (n/100)*len(aprobaron)
+porcentaje2 = (n/100)*len(reprobaron)
 print("Aprobados: ", porcentaje1,"%",  "  Reprobados: ", porcentaje2,"%")
 
 
